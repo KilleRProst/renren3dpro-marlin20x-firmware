@@ -17,28 +17,6 @@ You should also do a `Motion > Bed Leveling > Level bed` followed by `Store Sett
 Please do a manual paper test (moving the nozzle slowly down to Z0 and checking with a piece of paper). If it's not perfect, use `Configuration > Advanced Settings > Probe Z Offset` to correct the difference and execute the calibration again.
 
 
-# Select the Configuration
-
-**Please select the correct values at the start of the Configuration.h file**
-
-The Kossel comes in 3 versions:
-
- * Pulley
- * Linear
- * Linear Plus
-
-Pulley and Linear use the same configuration, the Linear Plus is bigger and uses slightly different configurations.
-
-Typically the probes for the Anycubic Delta Kossel printers come in two different versions.
-
-  * Version 1: Z Probe Offset of -19.0mm
-
-    ![Version 1 Probe](images/Version1Probe.jpg)
-
-  * Version 2: Z Probe Offset of -16.8mm
-
-    ![Version 2 Probe](images/Version2Probe.jpg)
-
 If you select the `ANYCUBIC_PROBE_VERSION 0`: It's very important to follow the correct procedure to set it up after flashing the firmware, otherwise you might damage the printer by ramming the nozzle into the buildplate:
 
 * `Configuration > Advanced Settings > Initialize EEPROM`
