@@ -139,7 +139,11 @@
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
+<<<<<<< HEAD
 #define MACHINE_UUID "1525e763-c367-45be-8541-1aae30d4c732"
+=======
+//#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 
 // @section extruder
 
@@ -485,6 +489,29 @@
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
+<<<<<<< HEAD
+=======
+// Ultimaker
+//#define DEFAULT_Kp 22.2
+//#define DEFAULT_Ki 1.08
+//#define DEFAULT_Kd 114
+
+// MakerGear
+//#define DEFAULT_Kp 7.0
+//#define DEFAULT_Ki 0.1
+//#define DEFAULT_Kd 12
+
+// Mendel Parts V9 on 12V
+//#define DEFAULT_Kp 63.0
+//#define DEFAULT_Ki 2.25
+//#define DEFAULT_Kd 440
+
+// Anycubic Kossel - run 'M106 S255' & 'M303 E0 C10 S200'
+//#define DEFAULT_Kp 22.20
+//#define DEFAULT_Ki 1.08
+//#define DEFAULT_Kd 114.00
+
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 #define DEFAULT_Kp 39.42
 #define DEFAULT_Ki 4.86
 #define DEFAULT_Kd 79.92
@@ -639,6 +666,7 @@
 #endif
 
 // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
+<<<<<<< HEAD
 #define DELTA_PRINTABLE_RADIUS 100  // (mm)
 // Center-to-center distance of the holes in the diagonal push rods.
 #define DELTA_DIAGONAL_ROD 234.0   // (mm)
@@ -651,12 +679,30 @@
 
 #define DELTA_ENDSTOP_ADJ \
   { -1.16, 0, -0.62 }  // Get these values from G33 auto calibrate
+=======
+#define DELTA_PRINTABLE_RADIUS 95  // (mm)
+// Center-to-center distance of the holes in the diagonal push rods.
+#define DELTA_DIAGONAL_ROD 234   // (mm)
+// Horizontal distance bridged by diagonal push rods when effector is centered.
+#define DELTA_RADIUS 127.95        // (mm) Get this value from G33 auto calibrate
+
+
+// Distance between bed and nozzle Z home position
+#define DELTA_HEIGHT 284.37  // (mm) Get this value from G33 auto calibrate
+
+#define DELTA_ENDSTOP_ADJ \
+  { 0, 0, 0 }  // Get these values from G33 auto calibrate
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 
 // Trim adjustments for individual towers
 // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
 // measured in degrees anticlockwise looking from above the printer
 #define DELTA_TOWER_ANGLE_TRIM \
+<<<<<<< HEAD
   { -0.23, 0.09, 0.14 }  // Get these values from G33 auto calibrate
+=======
+  { 0, 0, 0 }  // Get these values from G33 auto calibrate
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 
 // Delta radius and diagonal rod adjustments (mm)
 //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -804,7 +850,11 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 #define DEFAULT_MAX_FEEDRATE \
+<<<<<<< HEAD
   { 200, 200, 200, 200 }
+=======
+  { 800, 800, 800, 1000 }
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -819,7 +869,11 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 #define DEFAULT_MAX_ACCELERATION \
+<<<<<<< HEAD
   { 999, 999, 999, 999 }
+=======
+  { 3000, 3000, 3000, 3000 }
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -835,9 +889,15 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
+<<<<<<< HEAD
 #define DEFAULT_ACCELERATION 999           // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION 999  // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION 999   // X, Y, Z acceleration for travel (non printing) moves
+=======
+#define DEFAULT_ACCELERATION 800           // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION 800  // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION 1000   // X, Y, Z acceleration for travel (non printing) moves
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 
 /**
  * Default Jerk limits (mm/s)
@@ -849,7 +909,11 @@
  */
 #define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
+<<<<<<< HEAD
 #define DEFAULT_XJERK 20.0
+=======
+#define DEFAULT_XJERK 10.0
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 #define DEFAULT_YJERK DEFAULT_XJERK
 #define DEFAULT_ZJERK DEFAULT_XJERK  // Must be same as XY for delta
 
@@ -860,7 +924,11 @@
 #endif
 #endif
 
+<<<<<<< HEAD
 #define DEFAULT_EJERK 40.0  // May be used by Linear Advance
+=======
+#define DEFAULT_EJERK 5.0  // May be used by Linear Advance
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 
 /**
  * Junction Deviation Factor
@@ -1046,13 +1114,21 @@
  * Specify a Probe position as { X, Y, Z }
  */
 
+<<<<<<< HEAD
 #define NOZZLE_TO_PROBE_OFFSET { -10, 6, -2.15}
+=======
+#define NOZZLE_TO_PROBE_OFFSET { -1, -13, -5.03 }
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10
 
 // X and Y axis travel speed (mm/m) between probes
+<<<<<<< HEAD
 #define XY_PROBE_SPEED 6000
+=======
+#define XY_PROBE_SPEED 2000
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
@@ -1452,7 +1528,11 @@
 #endif
 
 // Delta only homes to Z
+<<<<<<< HEAD
 #define HOMING_FEEDRATE_Z (90*60)
+=======
+#define HOMING_FEEDRATE_Z (200*30)
+>>>>>>> d5b23d4af675bfa752ca6c571f6a8762d749d116
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
